@@ -24,7 +24,7 @@ class MovieDetails extends React.Component {
         return (
             <div className="movie-details">
                 <div className="movie-title" onClick={this.props.onClick}>
-                    {this.props.movie.title}
+                    {this.state.movieDetails.title}
                     <div className="details">Year: {this.state.movieDetails.release_date}</div>
                     <div className="details">OverView: {this.state.movieDetails.overview}</div>
                     <div className="details">Popularity: {this.state.movieDetails.popularity}</div>
