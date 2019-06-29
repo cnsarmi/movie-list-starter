@@ -1,0 +1,50 @@
+.container {
+    border: 2px solid gray;
+    width: 353px;
+}
+
+h1 {
+  border: 1px solid gray;
+  background-color: lightseagreen;
+  text-align: center;
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.movie-list {
+  text-align: center;
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.media-body {
+  border: 1px solid gray;
+  text-align: center;
+  width: 300px;
+  padding: 10px;
+}
+
+.movie-details {
+  border: 1px solid gray;
+  text-align: center;
+  width: 278px;
+  padding: 10px;
+}
+
+.details {
+  text-align: left;
+}
+
+.searchInput {
+  width: 200px;
+}
+
+button {
+  background-color: lightskyblue;
+}
+
+input {
+  background-color: lightcyan;
+}
