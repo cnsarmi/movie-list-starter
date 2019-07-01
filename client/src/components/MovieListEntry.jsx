@@ -17,13 +17,13 @@ class MovieListEntry extends React.Component {
     }
 
     handleClick() {
-        this.props.toggleWatch(this.props.movie.title);
+        this.props.toggleWatch(this.props.movie.movie);
     }
 
     render() {
         let displayEntry = () => {
             if (!this.state.clicked) {
-                return <div className="movie-title" onClick={this.toggleDetails.bind(this)}>{this.props.movie.title}</div>
+                return <div className="movie-title" onClick={this.toggleDetails.bind(this)}>{this.props.movie.movie}</div>
                 
             } else {
                 return <MovieDetails onClick={this.toggleDetails.bind(this)} movie={this.props.movie}/>

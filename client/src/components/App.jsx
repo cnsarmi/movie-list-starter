@@ -2,6 +2,7 @@ import React from 'react';
 import MovieList from './MovieList.jsx';
 import Search from './Search.jsx';
 import AddMovie from './AddMovie.jsx';
+import axios from 'axios';
 
 class App extends React.Component {
     constructor(props) {
@@ -15,6 +16,17 @@ class App extends React.Component {
             showToWatch: true,
             showWatched: false
         }
+    }
+
+    componentDidMount() {
+        axios.get('/api/movies')
+        .then ((res) => {
+            console.log('state set')
+            this.setState(
+                {movies: res.data}
+            )
+            console.log(this.state.movies);
+        })
     }
 
     handleChange(event) {
@@ -38,7 +50,7 @@ class App extends React.Component {
 
     addMovie() {
         let temp = [
-            {title: this.state.newMovie,
+            {movie: this.state.newMovie,
             watched: false            
             }
         ]
@@ -50,7 +62,7 @@ class App extends React.Component {
     toggleWatch(movie) {
         var temp = this.state.movies;
         for (let i = 0; i < temp.length; i++) {
-            if (temp[i].title === movie) {
+            if (temp[i].movie === movie) {
                 temp[i].watched = !temp[i].watched
             }
         }
